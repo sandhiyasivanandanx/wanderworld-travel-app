@@ -1,0 +1,193 @@
+/* Advanced Planner - Ultra Compact & Fully Functional 3-Column Theme */
+
+.advanced-planner-section {
+  min-height: calc(100vh - 6rem);
+  background: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.6rem;
+}
+
+.planner-container-3col {
+  width: 100%;
+  max-width: 800px; 
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.6rem; 
+  padding: 1.6rem; 
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  overflow: visible !important; /* FIX DROPDOWN CLIPPING */
+}
+
+.planner-header-lite {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.planner-header-lite h2 { font-size: 2rem; margin-bottom: 0px; } 
+.planner-header-lite p { font-size: 1.1rem; color: var(--text-muted); }
+
+/* 3-Column Grid System */
+.tp-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem; 
+  overflow: visible !important; /* FIX DROPDOWN CLIPPING */
+}
+
+.tp-col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  overflow: visible !important; /* FIX DROPDOWN CLIPPING */
+}
+
+/* Specific z-index for column with dropdowns */
+.tp-col-center { z-index: 50 !important; }
+
+/* Label Styling */
+.tp-label-lite {
+  font-size: 0.85rem; 
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Left Column: Ultra Compact Textarea */
+.tp-textarea-3col {
+  flex: 1; 
+  min-height: 10rem; 
+  max-height: 14rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.15rem; 
+  line-height: 1.4;
+  resize: none;
+  transition: all 0.2s;
+}
+
+/* Center Column: Core Framework Inputs */
+.tp-input-stack { overflow: visible !important; position: relative; }
+.tp-input-stack .field-block { display: flex; flex-direction: column; position: relative; overflow: visible !important; }
+
+.tp-input-3col, .tp-select-3col {
+  width: 100%;
+  padding: 0.6rem 1rem; 
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  color: #fff;
+  font-size: 1.15rem; 
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+/* Specific fix for select dropdown placement */
+.tp-select-3col {
+  position: relative;
+  z-index: 100 !important;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+.tp-select-3col option {
+  background: #1e293b;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Field Spacing */
+.mt-12 { margin-top: 1rem; }
+.mt-16 { margin-top: 1rem; }
+.mt-24 { margin-top: 1.6rem; }
+
+/* Right Column: Interactive Preferences */
+.tp-toggle-group {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.2rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+  position: relative;
+  z-index: 20;
+}
+
+.tp-toggle-btn {
+  flex: 1;
+  padding: 0.5rem; 
+  background: none;
+  border: none;
+  border-radius: 0.6rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tp-toggle-btn.active { background: var(--primary); color: #fff; }
+
+.tp-chips-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.tp-interest-chip {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 99rem;
+  color: var(--text-muted);
+  font-size: 1rem; 
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tp-interest-chip.selected { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* Bottom Action Section */
+.tp-bottom-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.6rem; 
+  position: relative;
+  z-index: 10; /* Lowered so it doesn't block dropdowns */
+}
+
+.tp-btn-generate-main {
+  width: 100%;
+  max-width: 320px; 
+  padding: 1rem; 
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.25rem; 
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .tp-grid-wrapper { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .tp-col-left { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+  .tp-grid-wrapper { grid-template-columns: 1fr; }
+  .tp-col-left { grid-column: span 1; }
+  .planner-container-3col { padding: 1.2rem; border-radius: 0; }
+}

@@ -1,0 +1,233 @@
+.checkout-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-body);
+  backdrop-filter: blur(24px);
+  z-index: 2000;
+  overflow-y: auto;
+  padding: 4.8rem 0;
+}
+
+.checkout-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4.8rem;
+  align-items: flex-start;
+}
+
+/* Left Panel: Checkout Settings */
+.checkout-left.card {
+  padding: 4.8rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 2.4rem;
+}
+
+.checkout-header h2 {
+  font-size: 3.2rem;
+  background: linear-gradient(135deg, var(--text-primary), #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.8rem;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 1.6rem;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1.6rem;
+}
+
+.method-toggle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2.4rem;
+  background: none;
+  border: 1.5px solid transparent;
+  border-radius: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.method-toggle .icon {
+  font-size: 2.4rem;
+}
+
+.method-toggle .label {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.method-toggle:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.method-toggle.active {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: #a855f7;
+  color: #a855f7;
+  box-shadow: 0 0.8rem 2.4rem rgba(168, 85, 247, 0.1);
+}
+
+/* QR and UPI Styling */
+.upi-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 0.5px solid var(--border-color);
+  border-radius: 2.4rem;
+}
+
+.qr-wrapper-modern {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 2rem;
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.15);
+}
+
+.copy-upi-box code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  color: #10b981;
+}
+
+/* Right Panel: Order Summary Card */
+.summary-sticky {
+  position: sticky;
+  top: 4.8rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 2.4rem;
+  overflow: hidden;
+  box-shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.2);
+}
+
+.summary-hero {
+  position: relative;
+  height: 24rem;
+}
+
+.summary-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.summary-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 17, 26, 0.95), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3.2rem;
+}
+
+.summary-hero-overlay h3 {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.badge-luxury {
+  align-self: flex-start;
+  padding: 0.4rem 1.2rem;
+  background: #fbbf24;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+}
+
+.summary-body {
+  padding: 3.2rem;
+}
+
+.summary-section {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2.4rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  font-size: 1.5rem;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-row .label {
+  color: var(--text-muted);
+}
+
+.summary-row .val {
+  font-weight: 600;
+}
+
+.summary-breakdown {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2.4rem;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-label {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.total-amount {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #a855f7;
+}
+
+.animate-fade {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+  .checkout-container {
+    padding: 0 2.4rem;
+  }
+  .checkout-right {
+    order: -1;
+  }
+}

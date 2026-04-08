@@ -1,0 +1,102 @@
+.package-details-page { padding-bottom: 100px; min-height: 100vh; }
+.package-hero {
+  height: 50vh; min-height: 480px; background-size: cover; background-position: center;
+  display: flex; align-items: flex-end; padding-bottom: 60px;
+}
+.hero-content h1 { font-size: 56px; margin: 12px 0; letter-spacing: -1px; }
+.hero-meta { display: flex; gap: 24px; font-size: 18px; font-weight: 500; opacity: 0.9; }
+
+.package-grid { display: grid; grid-template-columns: 1fr 380px; gap: 40px; }
+
+/* Info Card */
+.info-card {
+  background: var(--dark-2); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg); padding: 32px;
+}
+.section-title { font-size: 20px; margin-bottom: 24px; }
+
+/* Quick Facts */
+.facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.fact-item { display: flex; flex-direction: column; gap: 4px; }
+.fact-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.fact-value { font-weight: 600; font-size: 16px; }
+
+/* Attractions Chip */
+.attractions-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.attraction-chip {
+  background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 40px;
+  font-size: 14px; border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+}
+.attraction-chip:hover { border-color: var(--primary); transform: translateY(-2px); }
+
+/* Tabs */
+.tabs-container { margin-top: 40px; }
+.tabs-header {
+  display: flex; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 32px;
+}
+.tab-btn {
+  padding: 12px 24px; background: none; border: none; font-size: 16px;
+  color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.tab-btn:hover { color: white; }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+
+/* Itinerary */
+.itinerary-list { display: flex; flex-direction: column; gap: 16px; }
+.itinerary-item {
+  background: var(--dark-2); border-radius: var(--radius); overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s ease;
+}
+.itinerary-header {
+  padding: 20px 24px; display: flex; align-items: center; gap: 20px; cursor: pointer;
+}
+.day-number {
+  background: var(--primary); color: var(--dark); font-weight: 700; font-size: 12px;
+  padding: 4px 10px; border-radius: 4px; min-width: 50px; text-align: center;
+}
+.day-title { flex: 1; margin: 0; font-size: 17px; }
+.chevron {
+  width: 20px; height: 20px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s ease;
+}
+.chevron::before { content: '▾'; color: var(--muted); font-size: 18px; }
+
+.itinerary-body {
+  max-height: 0; padding: 0 24px; overflow: hidden; opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.itinerary-item.open { border-color: rgba(255,255,255,0.15); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5); }
+.itinerary-item.open .itinerary-body { max-height: 400px; padding: 0 24px 24px 94px; opacity: 1; }
+.itinerary-item.open .chevron { transform: rotate(180deg); }
+
+/* Feature List */
+.feature-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.feature-item { display: flex; gap: 12px; font-size: 16px; align-items: flex-start; }
+.check { font-weight: 700; color: var(--primary); }
+.feature-item.red .check { color: #f87171; }
+.feature-item.green .check { color: #4ade80; }
+
+/* In Out Grid */
+.in-out-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.in-out-title { font-size: 18px; margin-bottom: 24px; }
+
+/* Sidebar */
+.pkg-sidebar { position: sticky; top: 100px; }
+.pkg-price-card { padding: 32px; }
+.price-tag { margin-bottom: 24px; }
+.price-amount { font-size: 40px; font-weight: 900; color: var(--primary); }
+.price-details { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+.price-row { display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+
+@media (max-width: 1024px) {
+  .package-grid { grid-template-columns: 1fr; }
+  .facts-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .hero-content h1 { font-size: 36px; }
+  .in-out-grid { grid-template-columns: 1fr; }
+  .itinerary-item.open .itinerary-body { padding: 0 20px 20px 20px; }
+}

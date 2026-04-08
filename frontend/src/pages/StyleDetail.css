@@ -1,0 +1,53 @@
+.style-detail-page { min-height: 100vh; padding-bottom: 80px; }
+.style-hero {
+  height: 45vh; min-height: 400px;
+  background-size: cover; background-position: center;
+  display: flex; align-items: flex-end; padding-bottom: 60px;
+}
+.back-link {
+  display: inline-block; margin-bottom: 24px; color: var(--mid);
+  text-decoration: none; font-weight: 500; font-size: 14px;
+}
+.back-link:hover { color: var(--primary); }
+.style-hero h1 { font-size: 64px; margin-bottom: 8px; letter-spacing: -2px; }
+.style-hero .subtitle { font-size: 20px; opacity: 0.8; }
+
+.style-detail-grid { display: grid; grid-template-columns: 1fr 360px; gap: 40px; }
+
+.detail-card {
+  background: var(--dark-2); padding: 32px; border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.detail-card h3 { font-size: 20px; margin-bottom: 24px; color: var(--primary); }
+
+.activities-list { display: flex; flex-direction: column; gap: 12px; }
+.activity-item { display: flex; align-items: center; gap: 14px; font-size: 16px; font-weight: 500; }
+.activity-item .dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; opacity: 0.6; }
+
+/* Timeline */
+.itinerary-timeline { position: relative; padding-left: 32px; }
+.itinerary-timeline::before {
+  content: ''; position: absolute; left: 11px; top: 0; bottom: 0;
+  width: 2px; background: rgba(255,255,255,0.06);
+}
+.timeline-item { position: relative; margin-bottom: 32px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-marker {
+  position: absolute; left: -43px; top: 4px;
+  background: var(--dark-3); border: 2px solid var(--primary);
+  color: var(--primary); font-size: 11px; font-weight: 800;
+  padding: 4px 10px; border-radius: 4px; z-index: 1;
+}
+.timeline-content h4 { font-size: 18px; margin-bottom: 8px; }
+.timeline-content p { line-height: 1.6; }
+
+/* Sidebar */
+.style-sidebar .sticky { position: sticky; top: 100px; }
+.culture-p { font-style: italic; color: var(--mid); line-height: 1.7; font-size: 15px; }
+.divider { height: 1px; background: rgba(255,255,255,0.08); margin: 24px 0; }
+.cta-text { margin-bottom: 16px; font-weight: 600; text-align: center; }
+
+@media (max-width: 992px) {
+  .style-detail-grid { grid-template-columns: 1fr; }
+  .style-hero h1 { font-size: 44px; }
+}

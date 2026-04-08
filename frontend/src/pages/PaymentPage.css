@@ -1,0 +1,133 @@
+/* Payment Page - Secure Checkout Theme */
+.payment-page-container {
+  min-height: 100vh;
+  background: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6.4rem 2rem;
+}
+
+.payment-layout {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 32rem;
+  overflow: hidden;
+}
+
+/* Controls Side */
+.payment-controls-side { padding: 4.8rem; }
+
+.payment-header { margin-bottom: 3.2rem; }
+
+.payment-methods-grid { display: flex; gap: 2.4rem; }
+
+.method-btn {
+  flex: 1;
+  padding: 1.6rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 1.6rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.method-btn:hover { border-color: var(--primary); background: rgba(255, 255, 255, 0.05); }
+
+.method-btn.active { border-color: var(--primary); background: rgba(168, 85, 247, 0.1); color: #fff; }
+
+.payment-method-canvas { min-height: 24rem; }
+
+.upi-payment-view { display: flex; flex-direction: column; align-items: center; }
+
+.qr-container-premium {
+  padding: 2.4rem;
+  background: #fff;
+  border-radius: 2.4rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.upi-id-badge {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+}
+
+.card-payment-view { padding: 0.8rem; opacity: 0.6; }
+
+.demo-notice { display: flex; align-items: center; gap: 0.8rem; color: #eab308; font-size: 1.15rem; background: rgba(234, 179, 8, 0.05); padding: 1.2rem; border-radius: 0.8rem; }
+
+.security-badges { display: flex; gap: 2.4rem; justify-content: center; }
+.badge-item { font-size: 1.15rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.8rem; }
+
+/* Summary Side */
+.payment-summary-side {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 4.8rem 3.2rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.order-row { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 2rem; }
+.order-row .label { font-size: 1.1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.order-row .val { font-size: 1.5rem; font-weight: 700; color: #fff; }
+
+.price-row-lite { display: flex; justify-content: space-between; font-size: 1.35rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+
+/* Success State Overlay - UPDATED WITH GRADIENT BACKGROUND */
+.payment-success-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #0B1120 0%, #0F172A 50%, #020617 100%);
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 9999;
+}
+
+.success-content-card {
+  width: 100%;
+  max-width: 500px;
+  background: #020617; /* Targeted Dark Background as per old version */
+  padding: 4.8rem;
+  border-radius: 3.2rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.success-icon-wrap {
+  width: 9.6rem;
+  height: 9.6rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.success-receipt-box {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+  text-align: left;
+}
+
+.receipt-row { display: flex; justify-content: space-between; font-size: 1.4rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+.receipt-row.highlight { font-weight: 800; color: #fff; font-size: 1.8rem; margin-top: 1.6rem; padding-top: 1.6rem; border-top: 1px solid var(--border-color); }
+
+@media (max-width: 900px) {
+  .payment-layout { grid-template-columns: 1fr; border-radius: 0; }
+  .payment-summary-side { border-left: none; border-top: 1px solid var(--border-color); }
+  .payment-page-container { padding: 0; }
+  .success-modal-card { border-radius: 0; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+}
