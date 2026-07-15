@@ -1,41 +1,41 @@
 # 🌍 WanderWorld – Travel Recommendation System
 
-🚀 A full-stack travel web application built using **FastAPI + React**, designed to explore countries and destinations with rich visuals and dynamic data.
+ A full-stack travel web application built using **FastAPI + React**, designed to explore countries and destinations with rich visuals and dynamic data.
 
 ---
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
-### 🔹 Frontend
+###  Frontend
 
 * React (Vite)
 * HTML, CSS
 * JavaScript
 
-### 🔹 Backend
+###  Backend
 
 * FastAPI
 * Python
 * SQLAlchemy
 
-### 🔹 Database
+###  Database
 
 * SQLite / PostgreSQL
 
 ---
 
-## ✨ Features
+##  Features
 
-* 🌎 Explore countries with beautiful images
-* 📍 View detailed places within each country
-* ⚡ Fast API-based data loading
-* 🎯 Clean and responsive UI
-* 🗄️ Database-driven dynamic content
+* Explore countries with beautiful images
+*  View detailed places within each country
+*  Fast API-based data loading
+*  Clean and responsive UI
+*  Database-driven dynamic content
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 travel-app/
@@ -60,9 +60,9 @@ travel-app/
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
-### 🔹 Backend Setup
+### Backend Setup
 
 ```
 cd backend
@@ -74,7 +74,7 @@ uvicorn main:app --reload --port 8001
 
 ---
 
-### 🔹 Frontend Setup
+### Frontend Setup
 
 ```
 cd frontend
@@ -83,12 +83,12 @@ npm run dev
 ```
 
 
-## 🚀 Future Improvements
+## Future Improvements
 
-* 🌐 Deployment (Render / Vercel)
-* 🔐 User authentication
-* ❤️ Save favorite destinations
-* 🔎 Search & filters
+*  Deployment (Render / Vercel)
+*  User authentication
+*  Save favorite destinations
+*  Search & filters
 
 ---
 
